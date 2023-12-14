@@ -7,5 +7,6 @@ Feature: Customer register
 
   Scenario: Customer without document
     Given customer without document
-    When customer is registered with fail
-    Then customer has been unknown
+    When customer failed to register
+    Then notify document must be not null
+    And customer is still unknown
